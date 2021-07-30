@@ -20,7 +20,7 @@ Installs the following packages and tools:
 * `curl`
 * `docker`
 * `git`
-* `go` (Version: 1.15.7)
+* `go` (Version: 1.16.6)
 * `chrome` (Google Chrome)
 * `gcloud` (Google Cloud SDK)
 * `helm` (Version 3)
@@ -55,7 +55,7 @@ Installs others:
 If you just want to get started with your work or update your workstation, run:
 
 ```bash
-wget -q -O - https://raw.githubusercontent.com/racoon63/setup-workstation/master/ubuntu/install.sh | bash
+wget -q -O - https://raw.githubusercontent.com/racoon63/setup-workstation/master/ubuntu/kde/install.sh | bash
 ```
 
 and reboot your workstation when the provisioning is done. Have fun!

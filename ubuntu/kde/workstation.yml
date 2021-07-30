@@ -19,6 +19,7 @@
           - apt-transport-https
           - aptitude
           - curl
+          - deja-dup
           - git
           - htop
           - jq
@@ -26,7 +27,6 @@
           - mlocate
           - vim
           - yakuake
-          - wget
 
 # ================== Fonts ================== #
 
@@ -147,20 +147,23 @@
         name:
           - code
 
-    - name: Download Visual Studio Code setup script
-      get_url:
-        url: https://raw.githubusercontent.com/racoon63/vscode/master/install.sh
-        dest: /tmp/vscode-setup.sh
-        mode: '0770'
-        force: yes
+    - name: Install vscode extensions
+      ansible.builtin.shell: "../../vscode/install.sh"
 
-    - name: Execute the vscode-setup.sh
-      shell: /tmp/vscode-setup.sh
+    # - name: Download Visual Studio Code setup script
+    #   get_url:
+    #     url: https://raw.githubusercontent.com/racoon63/vscode/master/install.sh
+    #     dest: /tmp/vscode-setup.sh
+    #     mode: '0770'
+    #     force: yes
 
-    - name: Remove the vscode-setup.sh
-      file: 
-        path: /tmp/vscode-setup.sh
-        state: absent
+    # - name: Execute the vscode-setup.sh
+    #   shell: /tmp/vscode-setup.sh
+
+    # - name: Remove the vscode-setup.sh
+    #   file: 
+    #     path: /tmp/vscode-setup.sh
+    #     state: absent
 
 # ================== Google Chrome ================== #
 
@@ -345,14 +348,14 @@
 
     - name: Download go
       get_url:
-        url: https://golang.org/dl/go1.16.3.linux-amd64.tar.gz
-        dest: /tmp/go1.16.3.linux-amd64.tar.gz
+        url: https://golang.org/dl/go1.16.6.linux-amd64.tar.gz
+        dest: /tmp/go1.16.6.linux-amd64.tar.gz
         mode: 0440
 
     - name: Extract go archive into /usr/local
       become: yes
       unarchive:
-        src: /tmp/go1.16.3.linux-amd64.tar.gz
+        src: /tmp/go1.16.6.linux-amd64.tar.gz
         dest: /usr/local
         remote_src: yes
 
@@ -405,4 +408,4 @@
 # ================== Complete ================== #
 
     - debug:
-        msg: Please reboot your workstation to complete provisioning.
+        msg: Please reboot your workstation to complete setup.

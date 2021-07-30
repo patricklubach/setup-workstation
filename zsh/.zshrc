@@ -2,7 +2,9 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/us
 
 # Exports
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$HOME/.tfenv/bin
+export PATH=$PATH:$HOME/.terraform/bin
+export PATH=$PATH:$HOME/.bin
+export PATH=$PATH:$HOME/go/bin
 
 export GOPATH=$HOME/go
 
