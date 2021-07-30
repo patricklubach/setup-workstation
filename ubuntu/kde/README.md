@@ -18,6 +18,7 @@ Installs the following packages and tools:
 * `aptitude`
 * `code` (Visual Studio Code)
 * `curl`
+* `deja-dup`
 * `docker`
 * `git`
 * `go` (Version: 1.16.6)

@@ -23,6 +23,7 @@ HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
 
 plugins=(   
+            asdf
             command-not-found
             docker
             docker-compose
@@ -31,6 +32,7 @@ plugins=(
             golang
             helm
             kubectl
+            minikube
             terraform
             thefuck
             vscode
@@ -44,7 +46,6 @@ plugins=(
 # Sources / Auto-completions
 source $ZSH/oh-my-zsh.sh
 source <(kubectl completion zsh)
-source <(minikube completion zsh)
 source <(helm completion zsh)
 
 # Aliases
@@ -53,3 +54,6 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 alias myip="curl http://ipecho.net/plain; echo"
 alias pip="pip3"
 alias python="python3"
+
+# asdf
+. $HOME/.asdf/asdf.sh
