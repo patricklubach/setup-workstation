@@ -24,9 +24,11 @@
           - htop
           - jq
           - keepass2
+          - latte-dock
           - mlocate
           - vim
           - yakuake
+          - wget
 
 # ================== Fonts ================== #
 
@@ -91,9 +93,11 @@
         dest=~/.oh-my-zsh
 
     - name: Downloading ~/.zshrc
-      get_url:
-        url: https://raw.githubusercontent.com/racoon63/setup-workstation/master/zsh/.zshrc
+      copy:
+        src: ../../zsh/.zshrc
         dest: "/home/{{ ansible_user_id }}/.zshrc"
+        owner: "{{ ansible_user_id }}"
+        group: "{{ ansible_user_id }}"
         mode: 0644
         force: yes
 
@@ -149,21 +153,6 @@
 
     - name: Install vscode extensions
       ansible.builtin.shell: "../../vscode/install.sh"
-
-    # - name: Download Visual Studio Code setup script
-    #   get_url:
-    #     url: https://raw.githubusercontent.com/racoon63/vscode/master/install.sh
-    #     dest: /tmp/vscode-setup.sh
-    #     mode: '0770'
-    #     force: yes
-
-    # - name: Execute the vscode-setup.sh
-    #   shell: /tmp/vscode-setup.sh
-
-    # - name: Remove the vscode-setup.sh
-    #   file: 
-    #     path: /tmp/vscode-setup.sh
-    #     state: absent
 
 # ================== Google Chrome ================== #
 
@@ -235,47 +224,6 @@
       loop: "{{ terragrunt_metadata.json.assets }}"
       when: item.name == "terragrunt_linux_amd64"
 
-# ================== tfenv ================== #
-    
-    - name: Install tfenv
-      git:
-        repo: "https://github.com/tfutils/tfenv.git"
-        dest: "~/.tfenv"
-        force: yes
-
-# ================== Terraform ================== #
-
-    - name: Get latest terraform version
-      uri:
-        url: 'https://checkpoint-api.hashicorp.com/v1/check/terraform'
-        method: GET
-        status_code: 200
-        timeout: 10
-      register: release
-
-    - name: Getting latest terraform version
-      set_fact:
-        version: "{{ release.json | json_query('current_version') }}"
-
-    - name: Create /usr/local/bin
-      become: yes
-      file:
-        path: /usr/local/bin
-        state: directory
-        owner: root
-        group: root
-        mode: '0755'
-
-    - name: Install terraform
-      become: yes
-      unarchive:
-        src: 'https://releases.hashicorp.com/terraform/{{ version }}/terraform_{{ version }}_linux_amd64.zip'
-        remote_src: yes
-        dest: /usr/local/bin
-        owner: root
-        group: root
-        mode: '0755'
-
 # ================== kubectl ================== #
 
     - name: Install kubectl repository key
@@ -337,6 +285,7 @@
       snap:
         name:
           - spotify
+          - tfswitch
 
 # ================== Golang ================== #
 
