@@ -361,6 +361,12 @@
         repo: 'https://github.com/asdf-vm/asdf.git'
         dest: ~/.asdf
 
+# ================== language support ================== #
+
+    - name: Install language support
+      ansible.builtin.shell: "apt install $(check-language-support)"
+      become: yes
+
 # ================== Complete ================== #
 
     - debug:
