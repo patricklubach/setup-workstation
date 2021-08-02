@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Usage:
-# wget -q -O - https://raw.githubusercontent.com/racoon63/setup-workstation/master/ubuntu/install.sh | bash
+# wget -q -O - https://raw.githubusercontent.com/patricklubach/setup-workstation/master/ubuntu/kde/install.sh | bash
 
 set -ex
 
@@ -23,7 +23,7 @@ export "PATH=$PATH:$HOME/.local/bin"
 # Clone respository
 if [[ ! -d /tmp/setup-workstation ]]
 then
-    git clone --progress https://github.com/racoon63/setup-workstation.git /tmp/setup-workstation
+    git clone --progress https://github.com/patricklubach/setup-workstation.git /tmp/setup-workstation
 fi
 
 # Switch to workdir
