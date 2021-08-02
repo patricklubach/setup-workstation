@@ -363,9 +363,18 @@
 
 # ================== language support ================== #
 
+    - name: Check language support
+      ansible.builtin.shell: "check-language-support"
+      register: languages
+
     - name: Install language support
-      ansible.builtin.shell: "apt install $(check-language-support)"
       become: yes
+      apt:
+        state: present
+        update_cache: yes
+        name:
+          - "{{ item }}"
+        with_items: "{{ languages }}"
 
 # ================== Complete ================== #
 
