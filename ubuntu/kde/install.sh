@@ -27,7 +27,7 @@ then
 fi
 
 # Switch to workdir
-cd /tmp/setup-workstation/ubuntu
+cd /tmp/setup-workstation/ubuntu/kde
 
 # Provision workstation
 ansible-playbook -i 'localhost,' workstation.yml --ask-become-pass 2>&1 | tee -a provision.log
