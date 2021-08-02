@@ -374,9 +374,9 @@
       apt:
         state: present
         update_cache: yes
-        name:
-          - "{{ item }}"
-        with_items: "{{ languages }}"
+        name: "{{ item }}"
+        with_items: 
+          - "{{ languages }}"
 
 # ================== Complete ================== #
 
