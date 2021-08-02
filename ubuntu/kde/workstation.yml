@@ -369,14 +369,16 @@
       ansible.builtin.shell: "check-language-support"
       register: languages
 
+    - name: Create language list
+      set_fact: 
+        lang_list: "{{ languages.split(' ') }}"
+    
     - name: Install language support
       become: yes
       apt:
         state: present
         update_cache: yes
-        name: "{{ item }}"
-        with_items: 
-          - "{{ languages }}"
+        name: "{{ lang_list }}"
 
 # ================== Complete ================== #
 
