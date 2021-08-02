@@ -4,11 +4,11 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 echo "=> Provision configurations"
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    cp -f linux/keybindings.json $HOME/.config/Code/User/keybindings.json
-    cp -f linux/settings.json $HOME/.config/Code/User/settings.json
+    cp -f $SCRIPT_DIR/linux/keybindings.json $HOME/.config/Code/User/keybindings.json
+    cp -f $SCRIPT_DIR/linux/settings.json $HOME/.config/Code/User/settings.json
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    cp -f mac/keybindings.json $HOME/.config/Code/User/keybindings.json
-    cp -f mac/settings.json $HOME/.config/Code/User/settings.json
+    cp -f $SCRIPT_DIR/mac/keybindings.json $HOME/.config/Code/User/keybindings.json
+    cp -f $SCRIPT_DIR/mac/settings.json $HOME/.config/Code/User/settings.json
 fi
 
 echo "=> Install extensions"
