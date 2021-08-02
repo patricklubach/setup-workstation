@@ -56,7 +56,7 @@ Installs others:
 If you just want to get started with your work or update your workstation, run:
 
 ```bash
-wget -q -O - https://raw.githubusercontent.com/racoon63/setup-workstation/master/ubuntu/kde/install.sh | bash
+wget -q -O - https://raw.githubusercontent.com/patricklubach/setup-workstation/main/ubuntu/kde/install.sh | bash
 ```
 
 and reboot your workstation when the provisioning is done. Have fun!
