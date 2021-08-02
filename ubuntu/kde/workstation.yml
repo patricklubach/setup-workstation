@@ -371,7 +371,7 @@
 
     - name: Create language list
       set_fact: 
-        lang_list: "{{ languages.split(' ') }}"
+        lang_list: "{{ languages.stdout.split(' ') }}"
     
     - name: Install language support
       become: yes
@@ -379,6 +379,7 @@
         state: present
         update_cache: yes
         name: "{{ lang_list }}"
+      when: languages.stdout != ""
 
 # ================== Complete ================== #
 
