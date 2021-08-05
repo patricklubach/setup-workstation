@@ -1,0 +1,18 @@
+---
+# tasks file for powerlevel_fonts
+- name: Create .fonts folder
+  file:
+    state: directory
+    path: ~/.fonts
+    mode: '0755'
+
+- name: Download fonts
+  get_url:
+    url: "{{ item.value }}"
+    dest: "~/.fonts/{{ item.key }}.ttf"
+    mode: "0660"
+    force: yes
+  loop: "{{ fonts | dict2items }}"
+
+- name: Update font cache
+  shell: fc-cache -f -v

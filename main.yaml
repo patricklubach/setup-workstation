@@ -1,0 +1,8 @@
+---
+- name: Setup workstation
+  gather_facts: yes
+  connection: local
+  hosts: localhost
+  roles:
+    - base_packages
+    - powerlevel_fonts
