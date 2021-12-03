@@ -6,7 +6,7 @@
   connection: local
   hosts: 127.0.0.1
   vars:
-    go_version: "1.16.6"
+    go_version: "1.17.4"
   tasks:
 
     - set_fact:
@@ -26,10 +26,8 @@
           - htop
           - jq
           - keepass2
-          - latte-dock
           - mlocate
           - vim
-          - yakuake
           - wget
 
 # ================== Fonts ================== #
@@ -279,15 +277,6 @@
         groups: 
           - docker
         name: "{{ username }}"
-
-# ================== Snaps ================== #
-
-    - name: Install snaps
-      become: yes
-      snap:
-        name:
-          - spotify
-          - tfswitch
 
 # ================== Golang ================== #
 
