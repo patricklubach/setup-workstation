@@ -1,0 +1,21 @@
+---
+- name: Install kubectl repository key
+  become: yes
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    state: present
+
+- name: Add kubectl repository to sources list
+  become: yes
+  apt_repository:
+    repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
+    state: present
+    filename: kubernetes
+
+- name: Install kubectl
+  become: yes
+  apt:
+    state: present
+    update_cache: yes
+    name:
+      - kubectl

@@ -1,0 +1,21 @@
+---
+- name: Add the Cloud SDK repository key
+  become: yes
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    state: present
+
+- name: Add Google Cloud SDK repository to sources list
+  become: yes
+  apt_repository:
+    repo: deb https://packages.cloud.google.com/apt cloud-sdk main
+    state: present
+    filename: google-cloud-sdk
+
+- name: Install Google Cloud SDK
+  become: yes
+  apt:
+    state: present
+    update_cache: yes
+    name:
+      - google-cloud-sdk

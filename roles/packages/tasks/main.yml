@@ -1,0 +1,20 @@
+---
+- name: Install general packages
+  become: yes
+  apt:
+    state: present
+    update_cache: yes
+    name:
+      - apt-transport-https
+      - aptitude
+      - curl
+      - deja-dup
+      - git
+      - htop
+      - jq
+      - keepass2
+      - mlocate
+      - vim
+      - wget
+      - xdotool
+      - yakuake

@@ -1,0 +1,26 @@
+---
+- name: Install Visual Studio Code repository key
+  become: yes
+  apt_key:
+    url: https://packages.microsoft.com/keys/microsoft.asc
+    state: present
+
+- name: Add Visual Studio Code repository to sources list
+  become: yes
+  apt_repository:
+    repo: deb https://packages.microsoft.com/repos/code stable main
+    state: present
+    filename: vscode
+
+- name: Install Visual Studio Code
+  become: yes
+  apt:
+    state: present
+    update_cache: yes
+    name:
+      - code
+
+- name: Install vscode extensions
+  ansible.builtin.shell: "code --install-extension {{ item }}"
+  with_items:
+    - "{{ plugins }}"

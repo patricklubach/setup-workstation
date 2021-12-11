@@ -1,0 +1,9 @@
+---
+fedora:
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+ubuntu:
+  - docker.io
+  - docker-compose
+  - docker-doc

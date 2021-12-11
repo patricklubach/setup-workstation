@@ -14,5 +14,13 @@
     force: yes
   loop: "{{ fonts | dict2items }}"
 
+- name: Install Powerline Fonts
+  become: yes
+  apt:
+    state: present
+    update_cache: yes
+    name:
+      - fonts-powerline
+
 - name: Update font cache
   shell: fc-cache -f -v
