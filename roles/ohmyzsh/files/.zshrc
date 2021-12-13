@@ -22,7 +22,7 @@ HYPHEN_INSENSITIVE="true"
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 
-plugins=(   
+plugins=(
             asdf
             command-not-found
             docker
@@ -54,6 +54,5 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 alias myip="curl http://ipecho.net/plain; echo"
 alias pip="pip3"
 alias python="python3"
-
-# asdf
-. $HOME/.asdf/asdf.sh
+alias gactivate="gcloud config configurations activate"
+alias tflint="docker run --rm -v $(pwd):/data -t ghcr.io/terraform-linters/tflint"

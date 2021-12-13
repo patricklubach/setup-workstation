@@ -1,26 +1,23 @@
 ---
-- name: Install Google Chrome browser repository key
+- name: Install virtualbox repository keys
   become: yes
-  apt_key:
-    url: '{{ item }}'
+  ansible.builtin.apt_key:
+    url: "{{ item }}"
     state: present
-  with_items:
-    - https://www.virtualbox.org/download/oracle_vbox_2016.asc
-    - https://www.virtualbox.org/download/oracle_vbox.asc
-
+  loop: "{{ repo_keys }}"
 # TODO: check for fingerprint
 
-- name: Add Google Chrome browser repository to sources list
+- name: Add virtualbox repository to sources list
   become: yes
   apt_repository:
-    repo: deb https://dl.google.com/linux/chrome/deb/ stable main
+    repo: "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib"
     state: present
-    filename: google-chrome
+    filename: virtualbox
 
-- name: Install Google Chrome browser
+- name: Install virtualbox
   become: yes
   apt:
     state: present
     update_cache: yes
     name:
-      - google-chrome-stable
+      - virtualbox-6.1

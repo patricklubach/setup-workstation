@@ -2,7 +2,7 @@
 # tasks file for ohmyzsh
 - name: Installing zsh
   become: yes
-  apt: 
+  apt:
     name: zsh
     state: latest
 
@@ -12,14 +12,11 @@
     dest: ~/.oh-my-zsh
     force: yes
 
-- name: Copying ~/.zshrc
-  copy:
+- name: Link .zshrc
+  ansible.builtin.file:
     src: .zshrc
     dest: "/home/{{ ansible_user_id }}/.zshrc"
-    owner: "{{ ansible_user_id }}"
-    group: "{{ ansible_user_id }}"
-    mode: 0644
-    force: yes
+    state: link
 
 - name: Get zsh path
   command: which zsh

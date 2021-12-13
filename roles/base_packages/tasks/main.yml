@@ -1,8 +1,0 @@
----
-# tasks file for base_packages
-- name: Install general packages
-  become: yes
-  apt:
-    state: present
-    update_cache: yes
-    name: "{{ packages }}"

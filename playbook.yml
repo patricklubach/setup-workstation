@@ -1,0 +1,20 @@
+---
+- name: Setup workstation
+  gather_facts: yes
+  connection: local
+  hosts: localhost
+  roles:
+    - packages
+    - fonts
+    - language
+    - ohmyzsh
+    - chrome
+    - docker
+    - vscode
+    - virtualbox
+    - chrome
+    - golang
+    - google_cloud_sdk
+    - helm
+    - kubectl
+    - minikube
