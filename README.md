@@ -51,16 +51,18 @@ Others:
 
 ## OS support
 
-The ansible playbook is tested with the following OS:
+The ansible playbook is tested and support on the following OS:
 
 * Ubuntu 16.04 / 18.04 / 20.04.3
+
+If an error occurs, please create an issue.
 
 ## Quick installation
 
 If you just want to get started with your work or update your workstation, run:
 
 ```bash
-wget -q -O - https://raw.githubusercontent.com/patricklubach/setup-workstation/main/ubuntu/kde/install.sh | bash
+wget -q -O - https://raw.githubusercontent.com/patricklubach/setup-workstation/main/install.sh | bash
 ```
 
 and reboot your workstation when the provisioning is done. Have fun!
