@@ -45,9 +45,16 @@ export "PATH=$PATH:$HOME/.local/bin"
 SETUP_DIR=$HOME/.setup-workstation
 
 # Clone respository
-if [[ ! -d $HOME/.setup-workstation ]]
+if [[ ! -d $SETUP_DIR ]]
 then
     git clone --progress https://github.com/patricklubach/setup-workstation.git ${SETUP_DIR}
+fi
+
+# Pull changes if there
+if [[ ! $SETUP_DIR ]]
+then
+    cd ${SETUP_DIR}
+    git pull origin main
 fi
 
 # Switch to workdir
