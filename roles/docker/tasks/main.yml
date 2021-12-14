@@ -9,7 +9,7 @@
 
 # - name: Install Docker through dnf
 #   become: yes
-#   apt:
+#   dnf:
 #     state: present
 #     update_cache: yes
 #     name: '{{ ansible_facts["distribution"]|lower }}'
@@ -17,7 +17,7 @@
 
 - name: Install Docker through apt
   become: yes
-  dnf:
+  apt:
     state: present
     update_cache: yes
     name: '{{ ansible_facts["distribution"]|lower }}'
