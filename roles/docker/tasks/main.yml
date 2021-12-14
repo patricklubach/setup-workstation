@@ -1,20 +1,27 @@
 ---
-- name: Install dnf-plugins-core
+# - name: Install dnf-plugins-core
+#   become: yes
+#   dnf:
+#     state: present
+#     update_cache: yes
+#     name: dnf-plugins-core
+#   when: ansible_facts["os_family"]|lower == "fedora"
+
+# - name: Install Docker through dnf
+#   become: yes
+#   apt:
+#     state: present
+#     update_cache: yes
+#     name: '{{ ansible_facts["os_family"]|lower }}'
+#   when: ansible_facts["os_family"]|lower == "fedora"
+
+- name: Install Docker through apt
   become: yes
   dnf:
     state: present
     update_cache: yes
-    name: dnf-plugins-core
-  when: ansible_facts['os_family']|lower == 'fedora'
-
-- name: Install Docker
-  become: yes
-  apt:
-    state: present
-    update_cache: yes
-    name: '{{ item }}'
-  with_items:
-   - '{{ ansible_facts["os_family"]|lower == "fedora" }}'
+    name: '{{ ansible_facts["os_family"]|lower }}'
+  when: ansible_facts["os_family"]|lower == "ubuntu"
 
 - name: Enable and start docker daemon
   become: yes
@@ -31,7 +38,7 @@
   become: yes
   user:
     append: yes
-    groups: 
+    groups:
       - docker
     name: "{{ username }}"
 
