@@ -1,23 +1,9 @@
 ---
-- name: Install Google Chrome browser repository key
+- name: Downloads and installs Google Chrome browser deb package
   become: yes
-  apt_key:
-    url: https://dl.google.com/linux/linux_signing_key.pub
+  apt:
     state: present
-
-- name: Clear Google Chrome browser repository sources list
-  become: yes
-  apt_repository:
-    repo: deb https://dl.google.com/linux/chrome/deb/ stable main
-    state: absent
-    filename: google-chrome
-
-- name: Add Google Chrome browser repository to sources list
-  become: yes
-  apt_repository:
-    repo: deb https://dl.google.com/linux/chrome/deb/ stable main
-    state: present
-    filename: google-chrome
+    deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 - name: Install Google Chrome browser
   become: yes
