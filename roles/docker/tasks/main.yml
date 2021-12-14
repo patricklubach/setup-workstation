@@ -21,7 +21,7 @@
     state: present
     update_cache: yes
     name: "{{ item }}"
-  loop: lookup(ansible_facts["distribution"]|lower)
+  loop: "{{ ubuntu }}"
   when: ansible_facts["distribution"]|lower == "ubuntu"
 
 - name: Enable and start docker daemon
