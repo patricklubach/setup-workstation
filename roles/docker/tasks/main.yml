@@ -20,7 +20,8 @@
   apt:
     state: present
     update_cache: yes
-    name: '{{ ansible_facts["distribution"]|lower }}'
+    name: "{{ item }}"
+  loop: '{{ ansible_facts["distribution"]|lower }}'
   when: ansible_facts["distribution"]|lower == "ubuntu"
 
 - name: Enable and start docker daemon
