@@ -1,5 +1,4 @@
 ---
-# tasks file for ohmyzsh
 - name: Installing zsh
   become: yes
   apt:
@@ -11,10 +10,11 @@
     repo: 'https://github.com/robbyrussell/oh-my-zsh'
     dest: ~/.oh-my-zsh
     force: yes
+    update: yes
 
 - name: Link .zshrc
   ansible.builtin.file:
-    src: ../files/.zshrc
+    src: .zshrc
     dest: "/home/{{ ansible_user_id }}/.zshrc"
     state: link
 
