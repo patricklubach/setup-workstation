@@ -7,6 +7,13 @@
   loop: "{{ repo_keys }}"
 # TODO: check for fingerprint
 
+- name: Clear virtualbox repository sources list
+  become: yes
+  apt_repository:
+    repo: "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib"
+    state: absent
+    filename: virtualbox
+
 - name: Add virtualbox repository to sources list
   become: yes
   apt_repository:

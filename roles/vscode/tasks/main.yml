@@ -6,6 +6,14 @@
     state: present
   when: ansible_facts['distribution']|lower == 'ubuntu'
 
+- name: Clear Visual Studio Code deb repository from sources list
+  become: yes
+  apt_repository:
+    repo: deb https://packages.microsoft.com/repos/code stable main
+    state: absent
+    filename: vscode
+  when: ansible_facts['distribution']|lower == 'ubuntu'
+
 - name: Add Visual Studio Code deb repository to sources list
   become: yes
   apt_repository:
