@@ -51,7 +51,7 @@ then
 fi
 
 # Pull changes if there
-if [[ ! $SETUP_DIR ]]
+if [[ -d $SETUP_DIR ]]
 then
     cd ${SETUP_DIR}
     git pull origin main
