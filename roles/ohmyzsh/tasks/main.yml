@@ -14,7 +14,7 @@
 
 - name: Link .zshrc
   ansible.builtin.file:
-    src: ../files/.zshrc
+    src: "{{ role_path }}/files/.zshrc"
     dest: "/home/{{ ansible_user_id }}/.zshrc"
     state: link
 

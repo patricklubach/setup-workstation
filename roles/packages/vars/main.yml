@@ -11,6 +11,7 @@ packages:
   - jq
   - keepass2
   - mlocate
+  - net-tools
   - vim
   - wget
   - xdotool
