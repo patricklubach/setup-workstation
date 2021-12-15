@@ -3,7 +3,7 @@
   become: yes
   apt:
     state: present
-    deb: deb_url
+    deb: "{{ deb_url }}"
 
 - name: Install vscode extensions
   ansible.builtin.shell: "code --install-extension {{ item }}"

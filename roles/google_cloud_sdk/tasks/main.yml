@@ -9,20 +9,13 @@
 - name: Add the Cloud SDK repository key
   become: yes
   apt_key:
-    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    url: "{{ repo_key_url }}"
     state: present
-
-- name: Clear Google Cloud SDK repository sources list
-  become: yes
-  apt_repository:
-    repo: deb https://packages.cloud.google.com/apt cloud-sdk main
-    state: absent
-    filename: google-cloud-sdk
 
 - name: Add Google Cloud SDK repository to sources list
   become: yes
   apt_repository:
-    repo: deb https://packages.cloud.google.com/apt cloud-sdk main
+    repo: "{{ repo_url }}"
     state: present
     filename: google-cloud-sdk
 

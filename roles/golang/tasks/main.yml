@@ -5,13 +5,13 @@
     path: /usr/local/go
     state: absent
 
-- name: Download go
+- name: Download go {{go_version}}
   get_url:
     url: https://golang.org/dl/go{{go_version}}.linux-amd64.tar.gz
     dest: /tmp/go{{go_version}}.linux-amd64.tar.gz
     mode: 0440
 
-- name: Extract go archive into /usr/local
+- name: Extract go{{go_version}} archive into /usr/local
   become: yes
   unarchive:
     src: /tmp/go{{go_version}}.linux-amd64.tar.gz
@@ -22,7 +22,7 @@
   set_fact:
     username: "{{ ansible_user_id }}"
 
-- name: Add go to PATH
+- name: Add go{{go_version}} to PATH
   become: yes
   lineinfile:
     path: "/home/{{username}}/.zshrc"

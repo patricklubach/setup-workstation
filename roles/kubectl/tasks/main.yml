@@ -2,20 +2,13 @@
 - name: Install kubectl repository key
   become: yes
   apt_key:
-    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    url: "{{ repo_key_url }}"
     state: present
-
-- name: Clear kubectl repository sources list
-  become: yes
-  apt_repository:
-    repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
-    state: absent
-    filename: kubernetes
 
 - name: Add kubectl repository to sources list
   become: yes
   apt_repository:
-    repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
+    repo: "{{ repo_url }}"
     state: present
     filename: kubernetes
 
