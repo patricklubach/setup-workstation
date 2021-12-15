@@ -12,17 +12,15 @@ plugins:
   - golang.go
   - Gruntfuggly.todo-tree
   - hashicorp.terraform
-  - johnpapa.vscode-peacock
-  - kiteco.kite
   - magicstack.MagicPython
-  - mechatroner.rainbow-csv
+  - mindaro.mindaro
+  - mindaro-dev.file-downloader
   - mohsen1.prettify-json
   - monokai.theme-monokai-pro-vscode
   - ms-azuretools.vscode-docker
   - ms-kubernetes-tools.vscode-kubernetes-tools
   - ms-python.python
   - ms-python.vscode-pylance
-  - ms-toolsai.jupyter
   - ms-vscode-remote.remote-containers
   - msyrus.go-doc
   - rangav.vscode-thunder-client

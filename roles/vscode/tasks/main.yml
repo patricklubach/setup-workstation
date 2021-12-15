@@ -5,57 +5,6 @@
     state: present
     deb: https://update.code.visualstudio.com/latest/linux-deb-x64/stable
 
-# - name: Clear Visual Studio Code deb repository from sources list
-#   become: yes
-#   apt_repository:
-#     repo: deb https://packages.microsoft.com/repos/code stable main
-#     state: absent
-#     filename: vscode
-#   when: ansible_facts['distribution']|lower == 'ubuntu'
-
-# - name: Add Visual Studio Code deb repository to sources list
-#   become: yes
-#   apt_repository:
-#     repo: deb https://packages.microsoft.com/repos/code stable main
-#     state: present
-#     filename: vscode
-#   when: ansible_facts['distribution']|lower == 'ubuntu'
-
-# - name: Install Visual Studio Code
-#   become: yes
-#   apt:
-#     state: present
-#     update_cache: yes
-#     name:
-#       - code
-#   when: ansible_facts['distribution']|lower == 'ubuntu'
-
-# FEDORA
-# - name: Install vscodium rpm repository key
-#   become: yes
-#   ansible.builtin.rpm_key:
-#     state: present
-#     key: https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
-#   when: ansible_facts['distribution']|lower == 'fedora'
-
-# - name: Add Visual Studio Code rpm repository to sources list
-#   become: yes
-#   apt_repository:
-#     repo: deb https://packages.microsoft.com/repos/code stable main
-#     state: present
-#     filename: vscode
-#   when: ansible_facts['distribution']|lower == 'fedora'
-
-# - name: Install Visual Studio Code
-#   become: yes
-#   apt:
-#     state: present
-#     update_cache: yes
-#     name:
-#       - code
-#   when: ansible_facts['distribution']|lower == 'fedora'
-
-# COMMON
 - name: Install vscode extensions
   ansible.builtin.shell: "code --install-extension {{ item }}"
   with_items:
@@ -63,7 +12,7 @@
 
 - name: Link setings.json and keybindings.json
   ansible.builtin.file:
-    src: "{{ role_path }}/files/{{ item }}"
+    src: "{{ role_path }}/files/linux/{{ item }}"
     dest: "/home/{{ ansible_user_id }}/.config/Code/User/{{ item }}"
     state: link
   with_items:
