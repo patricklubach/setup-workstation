@@ -1,35 +1,34 @@
 ---
-- name: Install vscodium gpg repository key
-  become: yes
-  apt_key:
-    url: https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
-    state: present
-  when: ansible_facts['distribution']|lower == 'ubuntu'
-
-- name: Clear Visual Studio Code deb repository from sources list
-  become: yes
-  apt_repository:
-    repo: deb https://packages.microsoft.com/repos/code stable main
-    state: absent
-    filename: vscode
-  when: ansible_facts['distribution']|lower == 'ubuntu'
-
-- name: Add Visual Studio Code deb repository to sources list
-  become: yes
-  apt_repository:
-    repo: deb https://packages.microsoft.com/repos/code stable main
-    state: present
-    filename: vscode
-  when: ansible_facts['distribution']|lower == 'ubuntu'
-
-- name: Install Visual Studio Code
+- name: Downloads and installs vscode deb package
   become: yes
   apt:
     state: present
-    update_cache: yes
-    name:
-      - code
-  when: ansible_facts['distribution']|lower == 'ubuntu'
+    deb: https://update.code.visualstudio.com/latest/linux-deb-x64/stable
+
+# - name: Clear Visual Studio Code deb repository from sources list
+#   become: yes
+#   apt_repository:
+#     repo: deb https://packages.microsoft.com/repos/code stable main
+#     state: absent
+#     filename: vscode
+#   when: ansible_facts['distribution']|lower == 'ubuntu'
+
+# - name: Add Visual Studio Code deb repository to sources list
+#   become: yes
+#   apt_repository:
+#     repo: deb https://packages.microsoft.com/repos/code stable main
+#     state: present
+#     filename: vscode
+#   when: ansible_facts['distribution']|lower == 'ubuntu'
+
+# - name: Install Visual Studio Code
+#   become: yes
+#   apt:
+#     state: present
+#     update_cache: yes
+#     name:
+#       - code
+#   when: ansible_facts['distribution']|lower == 'ubuntu'
 
 # FEDORA
 # - name: Install vscodium rpm repository key
