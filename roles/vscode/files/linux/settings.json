@@ -1,0 +1,75 @@
+{
+    "editor.rulers": [79,100],
+
+    "terminal.integrated.profiles.linux": {
+        "zsh (login)": {
+          "path": "zsh",
+          "args": ["-l"]
+        }
+    },
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.startupEditor": "newUntitledFile",
+
+    "workbench.colorCustomizations": {
+        "terminal.foreground" : "#00ff44",
+        "terminal.background" : "#181818",
+        "editor.background": "#151515"
+    },
+    "vs-kubernetes": {
+        "vs-kubernetes.minikube-path.linux": "$HOME/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
+    },
+    "go.formatTool": "goimports",
+    "git.suggestSmartCommit": false,
+    "python.showStartPage": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Visual Studio Dark",
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "telemetry.telemetryLevel": "off",
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "security.workspace.trust.untrustedFiles": "open",
+    "redhat.telemetry.enabled": true,
+    "workbench.editor.untitled.hint": "hidden",
+    "editor.suggestSelection": "first",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "workbench.editor.enablePreview": false,
+    "go.toolsManagement.autoUpdate": true,
+    "files.trimTrailingWhitespace": true,
+    "window.zoomLevel": 3,
+    "files.autoSave": "afterDelay",
+    "editor.tabSize": 2,
+    "git.autofetch": true,
+    "atlascode.jira.enabled": true,
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "json.maxItemsComputed": 10000,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+    "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+    "yaml.schemas": {
+        "file:///home/racoon/.vscode/extensions/atlassian.atlascode-2.10.0/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    }
+}
