@@ -1,4 +1,5 @@
 ---
+deb_url: https://update.code.visualstudio.com/latest/linux-deb-x64/stable
 plugins:
   - aaron-bond.better-comments
   - atlassian.atlascode

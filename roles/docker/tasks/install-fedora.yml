@@ -1,0 +1,16 @@
+---
+# - name: Install dnf-plugins-core
+#   become: yes
+#   dnf:
+#     state: present
+#     update_cache: yes
+#     name: dnf-plugins-core
+#   when: ansible_facts["distribution"]|lower == "fedora"
+
+# - name: Install Docker through dnf
+#   become: yes
+#   dnf:
+#     state: present
+#     update_cache: yes
+#     name: '{{ ansible_facts["distribution"]|lower }}'
+#   when: ansible_facts["distribution"]|lower == "fedora"

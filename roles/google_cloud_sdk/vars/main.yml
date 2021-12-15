@@ -1,2 +1,5 @@
 ---
-# vars file for packages
+packages:
+  - apt-transport-https
+  - ca-certificates
+  - gnupg
