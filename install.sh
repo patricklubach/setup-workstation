@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Usage:
-# wget -q -O - https://raw.githubusercontent.com/patricklubach/setup-workstation/master/install.sh | bash
+# wget -q -O - https://raw.githubusercontent.com/patricklubach/setup-workstation/main/install.sh | bash
 
 set -ex
 
