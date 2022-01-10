@@ -1,6 +1,5 @@
 {
     "editor.rulers": [79,100],
-
     "terminal.integrated.profiles.linux": {
         "zsh (login)": {
           "path": "zsh",
@@ -25,6 +24,7 @@
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
     "python.formatting.provider": "black",
+    "python.formatting.blackArgs": ["--line-length", "79"],
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Visual Studio Dark",
     "vsicons.dontShowNewVersionMessage": true,
