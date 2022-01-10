@@ -1,6 +1,4 @@
 ---
-# vars file for packages
-# exclude packages list
 common_packages:
   - curl
   - deja-dup

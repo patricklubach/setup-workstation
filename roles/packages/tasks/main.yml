@@ -4,7 +4,7 @@
   apt:
     state: present
     update_cache: yes
-    name: "{{ packages }}"
+    name: "{{ common_packages }}"
   when: ansible_os_family == 'Debian'
 
 - name: Install common packages
@@ -12,7 +12,7 @@
   dnf:
     state: present
     update_cache: yes
-    name: "{{ packages }}"
+    name: "{{ common_packages }}"
   when: ansible_os_family == 'RedHat'
 
 - name: Install debian packages
