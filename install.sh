@@ -42,7 +42,7 @@ pip3 install --user ansible
 # Add ansible bin to PATH
 export "PATH=$PATH:$HOME/.local/bin"
 
-SETUP_DIR=$HOME/.setup-workstation
+declare -r SETUP_DIR=$HOME/.setup-workstation
 
 # Clone respository
 if [[ ! -d $SETUP_DIR ]]

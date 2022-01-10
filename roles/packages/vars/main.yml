@@ -1,18 +1,19 @@
 ---
 # vars file for packages
 # exclude packages list
-packages:
-  - apt-transport-https
-  - aptitude
+common_packages:
   - curl
   - deja-dup
   - git
   - htop
   - jq
-  - keepass2
+  - keepassxc
   - mlocate
   - net-tools
   - vim
   - wget
   - xdotool
   - yakuake
+packages_ubuntu:
+  - apt-transport-https
+  - aptitude

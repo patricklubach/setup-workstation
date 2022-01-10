@@ -6,15 +6,15 @@
   roles:
     - packages
     - fonts
-    - language
+    # - language
     - ohmyzsh
     - chrome
-    - docker
-    - vscode
-    - virtualbox
-    - chrome
-    - golang
-    - google_cloud_sdk
-    - helm
-    - kubectl
-    - minikube
+    # - docker
+    # - vscode
+    # - virtualbox
+    # - chrome
+    # - golang
+    # - google_cloud_sdk
+    # - helm
+    # - kubectl
+    # - minikube
