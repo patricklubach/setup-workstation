@@ -13,7 +13,7 @@
     # - virtualbox
     # - chrome
     # - golang
-    # - google_cloud_sdk
+    - google_cloud_sdk
     # - helm
     # - kubectl
     # - minikube
