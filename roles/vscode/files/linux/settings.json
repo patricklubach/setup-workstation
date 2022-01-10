@@ -22,9 +22,9 @@
     },
     "go.formatTool": "goimports",
     "git.suggestSmartCommit": false,
-    "python.showStartPage": false,
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
+    "python.formatting.provider": "black",
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Visual Studio Dark",
     "vsicons.dontShowNewVersionMessage": true,
@@ -70,6 +70,6 @@
     "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
     "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
     "yaml.schemas": {
-        "file:///home/racoon/.vscode/extensions/atlassian.atlascode-2.10.0/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///home/patricklubach/.vscode/extensions/atlassian.atlascode-2.10.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     }
 }
