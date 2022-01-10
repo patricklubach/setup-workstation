@@ -1,5 +1,5 @@
 ---
-- name: Install common packages
+- name: Install common packages for Ubuntu
   become: yes
   apt:
     state: present
@@ -7,7 +7,7 @@
     name: "{{ common_packages }}"
   when: ansible_os_family == 'Debian'
 
-- name: Install common packages
+- name: Install common packages for Fedora
   become: yes
   dnf:
     state: present

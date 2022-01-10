@@ -14,9 +14,7 @@ plugins:
   - Gruntfuggly.todo-tree
   - hashicorp.terraform
   - magicstack.MagicPython
-  - mindaro.mindaro
   - mindaro-dev.file-downloader
-  - mohsen1.prettify-json
   - monokai.theme-monokai-pro-vscode
   - ms-azuretools.vscode-docker
   - ms-kubernetes-tools.vscode-kubernetes-tools

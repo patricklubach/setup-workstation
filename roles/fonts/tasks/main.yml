@@ -21,6 +21,19 @@
     update_cache: yes
     name:
       - fonts-powerline
+  when: ansible_os_family == 'Debian'
+
+- name: Install Powerline Fonts
+  become: yes
+  dnf:
+    state: present
+    update_cache: yes
+    name:
+      - powerline
+      - powerline-fonts
+      - tmux-powerline
+      - vim-powerline
+  when: ansible_os_family == 'RedHat'
 
 - name: Update font cache
   shell: fc-cache -f -v

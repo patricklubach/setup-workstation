@@ -7,10 +7,9 @@
     - packages
     - fonts
     # - language
-    - ohmyzsh
     - chrome
     # - docker
-    # - vscode
+    - vscodium
     # - virtualbox
     # - chrome
     # - golang
@@ -18,3 +17,4 @@
     # - helm
     # - kubectl
     # - minikube
+    - ohmyzsh

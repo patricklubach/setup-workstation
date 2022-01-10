@@ -4,6 +4,14 @@
   apt:
     name: zsh
     state: latest
+  when: ansible_os_family == 'Debian'
+
+- name: Installing zsh
+  become: yes
+  dnf:
+    name: zsh
+    state: latest
+  when: ansible_os_family == 'RedHat'
 
 - name: Cloning oh-my-zsh
   git:
