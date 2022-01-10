@@ -1,5 +1,5 @@
 ---
-common_packages:
+packages_common:
   - curl
   - deja-dup
   - git
@@ -15,3 +15,9 @@ common_packages:
 packages_ubuntu:
   - apt-transport-https
   - aptitude
+packages_pip:
+  - black
+  - flake8
+  - pylama
+  - pylint
+  - yapf

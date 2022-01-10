@@ -4,7 +4,7 @@
   apt:
     state: present
     update_cache: yes
-    name: "{{ common_packages }}"
+    name: "{{ packages_common }}"
   when: ansible_os_family == 'Debian'
 
 - name: Install common packages for Fedora
@@ -12,7 +12,7 @@
   dnf:
     state: present
     update_cache: yes
-    name: "{{ common_packages }}"
+    name: "{{ packages_common }}"
   when: ansible_os_family == 'RedHat'
 
 - name: Install debian packages
@@ -22,3 +22,9 @@
     update_cache: yes
     name: "{{ packages_ubuntu }}"
   when: ansible_os_family == 'Debian'
+
+- name: Install common pip packages
+  become: yes
+  pip:
+    state: present
+    name: "{{ packages_pip }}"
