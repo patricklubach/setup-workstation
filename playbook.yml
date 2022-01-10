@@ -18,3 +18,4 @@
     # - kubectl
     # - minikube
     - ohmyzsh
+    # TODO: add tfswitch: https://github.com/warrensbox/terraform-switcher
