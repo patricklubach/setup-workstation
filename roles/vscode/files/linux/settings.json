@@ -20,13 +20,21 @@
         "vs-kubernetes.minikube-path.linux": "$HOME/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
     },
     "go.formatTool": "goimports",
-    "git.suggestSmartCommit": false,
-    "python.linting.flake8Enabled": true,
+    "git.suggestSmartCommit": true,
+    "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
     "python.formatting.provider": "black",
     "python.formatting.blackArgs": ["--line-length", "79"],
+    "python.analysis.typeCheckingMode": "strict",
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.autoImportCompletions": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
     "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.colorTheme": "Default Dark+",
     "vsicons.dontShowNewVersionMessage": true,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
@@ -55,8 +63,9 @@
     "workbench.editor.enablePreview": false,
     "go.toolsManagement.autoUpdate": true,
     "files.trimTrailingWhitespace": true,
-    "window.zoomLevel": 3,
+    "window.zoomLevel": 2,
     "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 30000,
     "editor.tabSize": 2,
     "git.autofetch": true,
     "atlascode.jira.enabled": true,
