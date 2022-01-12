@@ -1,45 +1,61 @@
 {
-    "editor.rulers": [79,100],
-    "terminal.integrated.profiles.linux": {
-        "zsh (login)": {
-          "path": "zsh",
-          "args": ["-l"]
-        }
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "terminal.integrated.fontFamily": "MesloLGS NF",
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "workbench.startupEditor": "newUntitledFile",
-
-    "workbench.colorCustomizations": {
-        "terminal.foreground" : "#00ff44",
-        "terminal.background" : "#181818",
-        "editor.background": "#151515"
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "vs-kubernetes": {
-        "vs-kubernetes.minikube-path.linux": "$HOME/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
-    },
-    "go.formatTool": "goimports",
-    "git.suggestSmartCommit": true,
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true,
-    "python.formatting.provider": "black",
-    "python.formatting.blackArgs": ["--line-length", "79"],
-    "python.analysis.typeCheckingMode": "strict",
-    "python.analysis.autoSearchPaths": true,
-    "python.analysis.autoImportCompletions": true,
-    "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "file",
+    "atlascode.jira.enabled": true,
     "editor.codeActionsOnSave": {
         "source.organizeImports": true
     },
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Default Dark+",
-    "vsicons.dontShowNewVersionMessage": true,
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.rulers": [
+        79,
+        100
+    ],
+    "editor.suggestSelection": "first",
+    "editor.tabSize": 2,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 30000,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.factorypath": true,
+        "**/.project": true,
+        "**/.settings": true
     },
+    "files.trimTrailingWhitespace": true,
+    "git.autofetch": true,
+    "git.suggestSmartCommit": true,
+    "go.formatTool": "goimports",
+    "go.toolsManagement.autoUpdate": true,
+    "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+    "json.maxItemsComputed": 10000,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.typeCheckingMode": "strict",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "79"
+    ],
+    "python.formatting.provider": "black",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "redhat.telemetry.enabled": true,
+    "security.workspace.trust.untrustedFiles": "open",
     "telemetry.telemetryLevel": "off",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.profiles.linux": {
+        "zsh (login)": {
+            "args": [
+                "-l"
+            ],
+            "path": "zsh"
+        }
+    },
     "todo-tree.general.tags": [
         "BUG",
         "HACK",
@@ -50,34 +66,25 @@
         "[x]"
     ],
     "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-    "security.workspace.trust.untrustedFiles": "open",
-    "redhat.telemetry.enabled": true,
-    "workbench.editor.untitled.hint": "hidden",
-    "editor.suggestSelection": "first",
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    },
-    "workbench.editor.enablePreview": false,
-    "go.toolsManagement.autoUpdate": true,
-    "files.trimTrailingWhitespace": true,
-    "window.zoomLevel": 2,
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 30000,
-    "editor.tabSize": 2,
-    "git.autofetch": true,
-    "atlascode.jira.enabled": true,
-    "[yaml]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "json.maxItemsComputed": 10000,
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
     "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+    "vs-kubernetes": {
+        "vs-kubernetes.minikube-path.linux": "$HOME/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
+    },
+    "vsicons.dontShowNewVersionMessage": true,
+    "window.zoomLevel": 2,
+    "workbench.colorCustomizations": {
+        "editor.background": "#151515",
+        "terminal.background": "#181818",
+        "terminal.foreground": "#00ff44"
+    },
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.startupEditor": "newUntitledFile",
     "yaml.schemas": {
         "file:///home/patricklubach/.vscode/extensions/atlassian.atlascode-2.10.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     }
