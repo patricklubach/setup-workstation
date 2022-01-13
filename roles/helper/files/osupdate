@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+set -e
+
+prepare_fedora() {
+    # Update and upgrade workstation
+    sudo dnf update
+}
+
+update_ubuntu() {
+    # Update and upgrade workstation
+    sudo apt update
+    sudo apt upgrade
+    sudo apt autoremove
+}
+
+source <(grep ID /etc/os-release)
+
+if [[ $ID == "fedora" ]]; then
+    prepare_fedora
+fi
+
+if [[ $ID == "ubuntu" ]]; then
+    update_ubuntu
+fi

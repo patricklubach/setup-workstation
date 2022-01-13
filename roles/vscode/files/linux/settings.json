@@ -43,7 +43,7 @@
     ],
     "python.formatting.provider": "black",
     "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": true,
     "redhat.telemetry.enabled": true,
     "security.workspace.trust.untrustedFiles": "open",
     "telemetry.telemetryLevel": "off",
@@ -71,7 +71,7 @@
         "vs-kubernetes.minikube-path.linux": "$HOME/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
     },
     "vsicons.dontShowNewVersionMessage": true,
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 1,
     "workbench.colorCustomizations": {
         "editor.background": "#151515",
         "terminal.background": "#181818",
@@ -86,6 +86,6 @@
     "workbench.iconTheme": "vscode-icons",
     "workbench.startupEditor": "newUntitledFile",
     "yaml.schemas": {
-        "file:///home/patricklubach/.vscode/extensions/atlassian.atlascode-2.10.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///home/patricklubach/.vscode/extensions/atlassian.atlascode-2.10.2/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     }
 }

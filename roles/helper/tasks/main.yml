@@ -1,0 +1,6 @@
+---
+- name: Link osupdate helper script
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/osupdate"
+    dest: "/home/{{ ansible_user_id }}/.local/bin/osupdate"
+    state: link

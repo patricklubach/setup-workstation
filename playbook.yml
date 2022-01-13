@@ -11,11 +11,12 @@
     # - docker
     - vscode
     # - virtualbox
-    # - chrome
     # - golang
     - google_cloud_sdk
     # - helm
     # - kubectl
     # - minikube
     - ohmyzsh
+    - flameshot
+    - helper
     # TODO: add tfswitch: https://github.com/warrensbox/terraform-switcher

@@ -1,0 +1,18 @@
+---
+- name: Install Google Chrome browser (apt)
+  become: yes
+  apt:
+    state: present
+    update_cache: yes
+    name:
+      - flameshot
+  when: ansible_os_family == 'Debian'
+
+- name: Install Google Chrome browser (dnf)
+  become: yes
+  dnf:
+    state: present
+    update_cache: yes
+    name:
+      - flameshot
+  when: ansible_os_family == 'RedHat'
