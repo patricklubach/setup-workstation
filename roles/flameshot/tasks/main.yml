@@ -1,18 +1,6 @@
 ---
-- name: Install Google Chrome browser (apt)
+- name: Install flameshot screenshot tool
   become: yes
-  apt:
+  package:
     state: present
-    update_cache: yes
-    name:
-      - flameshot
-  when: ansible_os_family == 'Debian'
-
-- name: Install Google Chrome browser (dnf)
-  become: yes
-  dnf:
-    state: present
-    update_cache: yes
-    name:
-      - flameshot
-  when: ansible_os_family == 'RedHat'
+    name: flameshot

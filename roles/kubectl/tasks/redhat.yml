@@ -1,0 +1,9 @@
+---
+- name: Copy Kubernetes repository file
+  become: yes
+  ansible.builtin.copy:
+    src: "{{ role_path }}/files/kubernetes.repo"
+    dest: /etc/yum.repos.d/kubernetes.repo
+    owner: root
+    group: root
+    mode: "0644"

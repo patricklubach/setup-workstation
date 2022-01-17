@@ -1,21 +1,12 @@
 ---
-- name: Install helm repository key
-  become: yes
-  apt_key:
-    url: "{{ repo_key_url }}"
-    state: present
+- name: Download helm v3 archive
+  ansible.builtin.unarchive:
+    src: https://get.helm.sh/helm-v3.8.0-rc.1-linux-amd64.tar.gz
+    dest: /tmp
+    remote_src: yes
 
-- name: Add helm repository to sources list
-  become: yes
-  apt_repository:
-    repo: "{{ repo_url }}"
-    state: present
-    filename: helm
-
-- name: Install helm
-  become: yes
-  apt:
-    state: present
-    update_cache: yes
-    name:
-      - helm
+- name: Copy helm to PATH
+  ansible.builtin.copy:
+    src: "/tmp/linux-amd64/helm"
+    dest: ~/.local/bin
+    mode: "0755"

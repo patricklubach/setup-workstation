@@ -60,5 +60,8 @@ fi
 # Switch to workdir
 cd ${SETUP_DIR}
 
+# Install Ansible roles
+ansible-galaxy install geerlingguy.docker
+
 # Provision workstation
 ansible-playbook playbook.yml --ask-become-pass 2>&1 | tee -a provision.log

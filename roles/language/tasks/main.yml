@@ -1,16 +1,6 @@
 ---
-- name: Check language support
-  ansible.builtin.shell: "check-language-support"
-  register: languages
+- include_tasks: redhat.yml
+  when: ansible_os_family == 'RedHat'
 
-- name: Create language list
-  set_fact: 
-    lang_list: "{{ languages.stdout.split(' ') }}"
-
-- name: Install language support
-  become: yes
-  apt:
-    state: present
-    update_cache: yes
-    name: "{{ lang_list }}"
-  when: languages.stdout != ""
+- include_tasks: debian.yml
+  when: ansible_os_family == 'Debian'

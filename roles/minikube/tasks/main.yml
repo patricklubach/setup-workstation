@@ -1,14 +1,9 @@
 ---
-- name: Install xz-utils (dependency of apt deb module)
-  become: yes
-  apt:
-    state: present
-    update_cache: yes
-    name:
-      - xz-utils
+- name: Download minikube
+  get_url:
+    url: https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+    dest: /tmp/minikube-linux-amd64
+    mode: "0550"
 
-- name: Downloads and installs minikube deb package
-  become: yes
-  apt:
-    state: present
-    deb: "{{ deb_url }}"
+- name: Install minikube
+  command: sudo install /tmp/minikube-linux-amd64 /usr/local/bin/minikube

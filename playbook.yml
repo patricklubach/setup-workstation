@@ -6,17 +6,18 @@
   roles:
     - packages
     - fonts
-    # - language
+    - language
     - chrome
-    # - docker
     - vscode
     # - virtualbox
     # - golang
     - google_cloud_sdk
-    # - helm
-    # - kubectl
-    # - minikube
+    - helm
+    - kubectl
+    - minikube
     - ohmyzsh
     - flameshot
     - helper
+    - role: geerlingguy.docker
+      become: yes
     # TODO: add tfswitch: https://github.com/warrensbox/terraform-switcher

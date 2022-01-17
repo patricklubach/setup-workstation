@@ -1,0 +1,6 @@
+---
+- name: Install languages.
+  become: yes
+  package:
+    name: langpacks-en
+    state: present

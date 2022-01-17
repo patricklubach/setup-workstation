@@ -86,6 +86,6 @@
     "workbench.iconTheme": "vscode-icons",
     "workbench.startupEditor": "newUntitledFile",
     "yaml.schemas": {
-        "file:///home/patricklubach/.vscode/extensions/atlassian.atlascode-2.10.2/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///home/patricklubach/.vscode/extensions/atlassian.atlascode-2.10.3/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     }
 }
