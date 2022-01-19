@@ -1,19 +1,9 @@
 ---
-- name: Install common packages for Ubuntu
+- name: Install common packages
   become: yes
-  apt:
+  package:
     state: present
-    update_cache: yes
     name: "{{ packages_common }}"
-  when: ansible_os_family == 'Debian'
-
-- name: Install common packages for Fedora
-  become: yes
-  dnf:
-    state: present
-    update_cache: yes
-    name: "{{ packages_common }}"
-  when: ansible_os_family == 'RedHat'
 
 - name: Install debian packages
   become: yes

@@ -13,7 +13,6 @@ packages_common:
   - xdotool
   - yakuake
 packages_ubuntu:
-  - apt-transport-https
   - aptitude
 packages_pip:
   - black

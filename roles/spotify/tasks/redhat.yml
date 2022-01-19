@@ -1,0 +1,25 @@
+---
+- name: Lookup Fedora version
+  command: rpm -E %fedora
+  register: fedora_version
+
+- name: Install the RPMFusion free repositories
+  become: yes
+  dnf:
+    name: "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{fedora_version.stdout}}.noarch.rpm"
+    state: present
+
+- name: Install the RPMFusion non-free repositories
+  become: yes
+  dnf:
+    name: "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{fedora_version.stdout}}.noarch.rpm"
+    state: present
+
+- name: Install lpf-spotify-client
+  become: yes
+  dnf:
+    state: present
+    name: lpf-spotify-client
+# - name: Install spotify
+#   become: yes
+#   command: lpf update

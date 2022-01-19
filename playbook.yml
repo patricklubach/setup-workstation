@@ -5,6 +5,7 @@
   hosts: localhost
   roles:
     - packages
+    - distrobox
     - fonts
     - language
     - chrome
@@ -18,6 +19,7 @@
     - ohmyzsh
     - flameshot
     - helper
+    - spotify
     - role: geerlingguy.docker
       become: yes
     # TODO: add tfswitch: https://github.com/warrensbox/terraform-switcher

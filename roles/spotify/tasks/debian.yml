@@ -1,0 +1,13 @@
+---
+- name: Install spotify repository key
+  become: yes
+  apt_key:
+    url: "{{ apt_repo_key_url }}"
+    state: present
+
+- name: Add spotify repository to sources list
+  become: yes
+  apt_repository:
+    repo: "{{ apt_repo_url }}"
+    state: present
+    filename: spotify
