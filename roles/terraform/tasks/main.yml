@@ -1,0 +1,40 @@
+---
+- name: Get system information path
+  command: uname
+  register: osdata
+
+- name: Download terraform-docs archive
+  ansible.builtin.unarchive:
+    src: https://github.com/terraform-docs/terraform-docs/releases/download/v0.16.0/terraform-docs-v0.16.0-{{ osdata.stdout }}-amd64.tar.gz
+    dest: /tmp
+    remote_src: yes
+
+- name: Copy terraform-docs to PATH
+  ansible.builtin.copy:
+    src: "/tmp/terraform-docs"
+    dest: ~/.local/bin
+    mode: "0755"
+
+- name: Download tfsec
+  get_url:
+    url: https://github.com/aquasecurity/tfsec/releases/download/v0.63.1/tfsec-linux-amd64
+    dest: ~/.local/bin/tfsec
+    mode: "0550"
+
+- name: Download tflint archive
+  ansible.builtin.unarchive:
+    src: https://github.com/terraform-linters/tflint/releases/download/v0.34.1/tflint_linux_amd64.zip
+    dest: ~/.local/bin
+    remote_src: yes
+
+- name: Download terraform-switcher archive
+  ansible.builtin.unarchive:
+    src: https://github.com/warrensbox/terraform-switcher/releases/download/0.13.1201/terraform-switcher_0.13.1201_{{ osdata.stdout }}_amd64.tar.gz
+    dest: /tmp
+    remote_src: yes
+
+- name: Copy terraform-switcher to PATH
+  ansible.builtin.copy:
+    src: "/tmp/tfswitch"
+    dest: ~/.local/bin
+    mode: "0755"

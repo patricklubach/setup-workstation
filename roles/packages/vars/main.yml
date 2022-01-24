@@ -17,6 +17,7 @@ packages_ubuntu:
 packages_pip:
   - black
   - flake8
+  - pre-commit
   - pylama
   - pylint
   - yapf

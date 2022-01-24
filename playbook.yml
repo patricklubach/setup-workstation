@@ -20,6 +20,6 @@
     - flameshot
     - helper
     - spotify
+    - terraform
     - role: geerlingguy.docker
       become: yes
-    # TODO: add tfswitch: https://github.com/warrensbox/terraform-switcher
