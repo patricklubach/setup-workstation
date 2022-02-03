@@ -33,6 +33,7 @@ plugins=(
             helm
             kubectl
             minikube
+            ssh-agent
             terraform
             thefuck
             vscode

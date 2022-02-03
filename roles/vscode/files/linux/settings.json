@@ -2,6 +2,9 @@
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[markdown]": {
+        "editor.formatOnSave": false
+    },
     "[yaml]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -44,6 +47,7 @@
     "python.formatting.provider": "black",
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
+    "python.terminal.activateEnvironment": true,
     "redhat.telemetry.enabled": true,
     "security.workspace.trust.untrustedFiles": "open",
     "telemetry.telemetryLevel": "off",
@@ -84,8 +88,5 @@
         "*.ipynb": "jupyter-notebook"
     },
     "workbench.iconTheme": "vscode-icons",
-    "workbench.startupEditor": "newUntitledFile",
-    "yaml.schemas": {
-        "file:///home/patricklubach/.vscode/extensions/atlassian.atlascode-2.10.4/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
-    }
+    "workbench.startupEditor": "newUntitledFile"
 }
