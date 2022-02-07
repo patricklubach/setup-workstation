@@ -8,6 +8,7 @@ packages_common:
   - keepassxc
   - mlocate
   - net-tools
+  - podman
   - vim
   - wget
   - xdotool
