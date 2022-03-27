@@ -48,7 +48,7 @@
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
     "python.terminal.activateEnvironment": true,
-    "redhat.telemetry.enabled": true,
+    "redhat.telemetry.enabled": false,
     "security.workspace.trust.untrustedFiles": "open",
     "telemetry.telemetryLevel": "off",
     "terminal.integrated.fontFamily": "MesloLGS NF",
@@ -75,7 +75,6 @@
         "vs-kubernetes.minikube-path.linux": "$HOME/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
     },
     "vsicons.dontShowNewVersionMessage": true,
-    "window.zoomLevel": 1,
     "workbench.colorCustomizations": {
         "editor.background": "#151515",
         "terminal.background": "#181818",
@@ -88,5 +87,6 @@
         "*.ipynb": "jupyter-notebook"
     },
     "workbench.iconTheme": "vscode-icons",
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "window.zoomLevel": 2
 }
