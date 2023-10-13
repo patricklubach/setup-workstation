@@ -37,7 +37,8 @@
     shell: "{{ zsh_path.stdout }}"
 
 - name: Install thefuck
-  pip:
+  become: yes
+  ansible.builtin.pip:
     name: thefuck
     state: present
 

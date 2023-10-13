@@ -5,29 +5,35 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/.local/bin
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Exports
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$HOME/.terraform/bin
-export PATH=$PATH:$HOME/.bin
-export PATH=$PATH:$HOME/go/bin
 
-export GOPATH=$HOME/go
+# zsh theme
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Path to your oh-my-zsh installation.
 export ZSH="${HOME}/.oh-my-zsh"
 export LANG=en_US.UTF-8
 
-# zsh theme
-ZSH_THEME="powerlevel10k/powerlevel10k"
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+# Exports
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.terraform/bin
+export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/.bin
+export PATH=$PATH:$HOME/go/bin
+
+export GOPATH=$HOME/go
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 plugins=(
             asdf
@@ -40,6 +46,7 @@ plugins=(
             helm
             kubectl
             minikube
+            poetry
             ssh-agent
             terraform
             thefuck
@@ -52,18 +59,36 @@ plugins=(
 )
 
 # Sources / Auto-completions
+# AWS CLI auto-completion
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+complete -C '/home/p-lubach/.local/bin/aws_completer' aws
 source $ZSH/oh-my-zsh.sh
-#source <(kubectl completion zsh)
-#source <(helm completion zsh)
+source <(kubectl completion zsh)
+source <(helm completion zsh)
+source <(gh completion -s zsh)
 
 # Aliases
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias myip="curl http://ipecho.net/plain; echo"
 alias pip="pip3"
-alias python="python3"
+alias python="python3.9"
 #alias gactivate="gcloud config configurations activate"
 #alias tflint="docker run --rm -v $(pwd):/data -t ghcr.io/terraform-linters/tflint"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(direnv hook zsh)"
+### BEGIN terraform_slim_image_wrapper.sh
+# alias pre-commit=/usr/local/bin/pre-commit
+# alias sops=/usr/local/bin/sops
+# alias terraform=/usr/local/bin/terraform
+### END terraform_slim_image_wrapper.sh
+
+# HSTR configuration - add this to ~/.zshrc
+alias hh=hstr                    # hh to be alias for hstr
+setopt histignorespace           # skip cmds w/ leading space from history
+export HSTR_CONFIG=hicolor       # get more colors
+bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
+
+setopt share_history
+

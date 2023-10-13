@@ -1,92 +1,105 @@
 {
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[markdown]": {
-        "editor.formatOnSave": false
-    },
-    "[yaml]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "atlascode.jira.enabled": true,
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": true
-    },
-    "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "file",
-    "editor.rulers": [
-        79,
-        100
-    ],
-    "editor.suggestSelection": "first",
-    "editor.tabSize": 2,
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 30000,
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.factorypath": true,
-        "**/.project": true,
-        "**/.settings": true
-    },
-    "files.trimTrailingWhitespace": true,
-    "git.autofetch": true,
-    "git.suggestSmartCommit": true,
-    "go.formatTool": "goimports",
-    "go.toolsManagement.autoUpdate": true,
-    "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
-    "json.maxItemsComputed": 10000,
-    "python.analysis.autoImportCompletions": true,
-    "python.analysis.autoSearchPaths": true,
-    "python.analysis.typeCheckingMode": "strict",
-    "python.formatting.blackArgs": [
-        "--line-length",
-        "79"
-    ],
-    "python.formatting.provider": "black",
-    "python.linting.enabled": true,
-    "python.linting.flake8Enabled": true,
-    "python.terminal.activateEnvironment": true,
-    "redhat.telemetry.enabled": false,
-    "security.workspace.trust.untrustedFiles": "open",
-    "telemetry.telemetryLevel": "off",
-    "terminal.integrated.fontFamily": "MesloLGS NF",
-    "terminal.integrated.profiles.linux": {
-        "zsh (login)": {
-            "args": [
-                "-l"
-            ],
-            "path": "zsh"
-        }
-    },
-    "todo-tree.general.tags": [
-        "BUG",
-        "HACK",
-        "FIXME",
-        "TODO",
-        "XXX",
-        "[ ]",
-        "[x]"
-    ],
-    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-    "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
-    "vs-kubernetes": {
-        "vs-kubernetes.minikube-path.linux": "$HOME/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
-    },
-    "vsicons.dontShowNewVersionMessage": true,
-    "workbench.colorCustomizations": {
-        "editor.background": "#151515",
-        "terminal.background": "#181818",
-        "terminal.foreground": "#00ff44"
-    },
-    "workbench.colorTheme": "Default Dark+",
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.untitled.hint": "hidden",
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
-    },
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.startupEditor": "newUntitledFile",
-    "window.zoomLevel": 2
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.autoSearchPaths": true,
+  "python.defaultInterpreterPath": "${workspaceFolder}/venv",
+  "python.venvFolders": [
+    "${workspaceFolder}"
+  ],
+  "python.terminal.activateEnvironment": true,
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.diagnosticMode": "openFilesOnly",
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.useLibraryCodeForTypes": true,
+  "python.analysis.inlayHints.variableTypes": false,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": [
+    "--line-length",
+    "79"
+  ],
+  "python.linting.enabled": true,
+  "python.linting.lintOnSave": true,
+  "python.linting.pylintEnabled": true,
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.rulers": [
+    79,
+    100
+  ],
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 30000,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/.settings": true
+  },
+  "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
+  "git.suggestSmartCommit": true,
+  "go.formatTool": "goimports",
+  "go.toolsManagement.autoUpdate": true,
+  "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+  "json.maxItemsComputed": 10000,
+  "redhat.telemetry.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.profiles.linux": {
+    "zsh (login)": {
+      "args": [
+        "-l"
+      ],
+      "path": "zsh"
+    }
+  },
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+  "vs-kubernetes": {
+    "vs-kubernetes.minikube-path.linux": "$HOME/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
+    "vs-kubernetes.crd-code-completion": "enabled"
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.colorCustomizations": {
+    "editor.background": "#151515",
+    "terminal.background": "#181818",
+    "terminal.foreground": "#00ff44"
+  },
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "newUntitledFile",
+  "yaml.schemas": {
+    "file:///home/p-lubach/.vscode/extensions/atlassian.atlascode-2.10.12/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "Notes.notesLocation": "/home/p-lubach/.config/vscode-notes",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "workbench.colorTheme": "Default Dark+",
+  "editor.wordWrap": "on",
+  "chat.editor.wordWrap": "on",
+  "workbench.editor.empty.hint": "hidden"
 }

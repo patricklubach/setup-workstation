@@ -1,7 +1,7 @@
 [
     {
-        "key": "ctrl+t",
-        "command": "workbench.action.terminal.focus"
+        "key": "ctrl+T",
+        "command": "workbench.action.terminal.toggleTerminal"
     },
     {
         "key": "ctrl+e",
@@ -14,7 +14,8 @@
     {
         "key": "ctrl+k",
         "command": "editor.action.addCommentLine"
-    },{
+    },
+    {
         "key": "ctrl+shift+k",
         "command": "editor.action.removeCommentLine"
     },
@@ -28,6 +29,10 @@
     },
     {
         "key": "ctrl+backspace",
+        "command": "editor.action.deleteLines"
+    },
+    {
+        "key": "ctrl+shift+x",
         "command": "editor.action.deleteLines"
     }
 ]
