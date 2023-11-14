@@ -67,3 +67,5 @@ and reboot your workstation when the provisioning is done. Have fun!
 - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
 - [powerline fonts](https://github.com/powerline/fonts)
 - [vscode](https://github.com/racoon63/vscode)
+- [gnome-look](https://www.gnome-look.org/s/Gnome/browse/)
+- [WhiteSur-gtk-theme](https://github.com/vinceliuice/WhiteSur-gtk-theme)

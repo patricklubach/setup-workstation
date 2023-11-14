@@ -1,4 +1,12 @@
 {
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+  },
+  "editor.lint""black-formatter.args": [
+    "--line-length",
+    "79"
+  ],
   "python.analysis.autoImportCompletions": true,
   "python.analysis.autoSearchPaths": true,
   "python.defaultInterpreterPath": "${workspaceFolder}/venv",
@@ -14,14 +22,6 @@
   "python.analysis.useLibraryCodeForTypes": true,
   "python.analysis.inlayHints.variableTypes": false,
   "python.analysis.inlayHints.functionReturnTypes": true,
-  "python.formatting.provider": "black",
-  "python.formatting.blackArgs": [
-    "--line-length",
-    "79"
-  ],
-  "python.linting.enabled": true,
-  "python.linting.lintOnSave": true,
-  "python.linting.pylintEnabled": true,
   "[markdown]": {
     "editor.formatOnSave": false
   },
@@ -76,10 +76,6 @@
   ],
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
   "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
-  "vs-kubernetes": {
-    "vs-kubernetes.minikube-path.linux": "$HOME/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
-    "vs-kubernetes.crd-code-completion": "enabled"
-  },
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.colorCustomizations": {
     "editor.background": "#151515",
@@ -87,19 +83,26 @@
     "terminal.foreground": "#00ff44"
   },
   "workbench.editor.enablePreview": false,
-  "workbench.editor.untitled.hint": "hidden",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "newUntitledFile",
-  "yaml.schemas": {
-    "file:///home/p-lubach/.vscode/extensions/atlassian.atlascode-2.10.12/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
-  },
   "Notes.notesLocation": "/home/p-lubach/.config/vscode-notes",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "workbench.colorTheme": "Default Dark+",
   "editor.wordWrap": "on",
   "chat.editor.wordWrap": "on",
-  "workbench.editor.empty.hint": "hidden"
+  "workbench.editor.empty.hint": "hidden",
+  "[yaml]": {
+    "editor.insertSpaces": true,
+    "editor.autoIndent": "none",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true,
+    }
+  },
+  "editor.renderWhitespace": "all"
 }
