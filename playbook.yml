@@ -4,22 +4,37 @@
   connection: local
   hosts: localhost
   roles:
-    - packages
-    - distrobox
-    - fonts
-    - language
-    - chrome
-    - vscode
+    - role: packages
+      enabled: True
+    - role: distrobox
+      enabled: False
+    - role: fonts
+      enabled: False
+    - role: language
+      enabled: False
+    - role: chrome
+      enabled: True
+    - role: vscode
+      enabled: True
     # - virtualbox
     # - golang
-    - google_cloud_sdk
-    - helm
-    - kubectl
-    - minikube
-    - ohmyzsh
-    - flameshot
-    - helper
-    - spotify
-    - terraform
+    - role: google_cloud_sdk
+      enabled: False
+    - role: helm
+      enabled: False
+    - role: kubectl
+      enabled: False
+    - role: minikube
+      enabled: False
+    - role: ohmyzsh
+      enabled: False
+    - role: flameshot
+      enabled: False
+    - role: helper
+      enabled: False
+    - role: spotify
+      enabled: False
+    - role: terraform
+      enabled: False
     - role: geerlingguy.docker
       become: yes

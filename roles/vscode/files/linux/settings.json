@@ -1,9 +1,22 @@
 {
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
-  "editor.lint""black-formatter.args": [
+  "[yaml]": {
+    "editor.insertSpaces": true,
+    "editor.autoIndent": "none",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    }
+  },
+  "black-formatter.args": [
     "--line-length",
     "79"
   ],
@@ -22,11 +35,8 @@
   "python.analysis.useLibraryCodeForTypes": true,
   "python.analysis.inlayHints.variableTypes": false,
   "python.analysis.inlayHints.functionReturnTypes": true,
-  "[markdown]": {
-    "editor.formatOnSave": false
-  },
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true
+    "source.organizeImports": "explicit"
   },
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
@@ -70,7 +80,8 @@
     "HACK",
     "FIXME",
     "TODO",
-    "XXX",
+    "DEPRECATED",
+    "INTERESTING",
     "[ ]",
     "[x]"
   ],
@@ -89,20 +100,13 @@
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "newUntitledFile",
   "Notes.notesLocation": "/home/p-lubach/.config/vscode-notes",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "auto",
   "workbench.colorTheme": "Default Dark+",
   "editor.wordWrap": "on",
   "chat.editor.wordWrap": "on",
   "workbench.editor.empty.hint": "hidden",
-  "[yaml]": {
-    "editor.insertSpaces": true,
-    "editor.autoIndent": "none",
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.quickSuggestions": {
-      "other": true,
-      "comments": true,
-      "strings": true,
-    }
-  },
-  "editor.renderWhitespace": "all"
+  "editor.renderWhitespace": "all",
+  "editor.tabCompletion": "on",
+  "cloudcode.duetAI.project": "gaie-0008052023",
+  "git.openRepositoryInParentFolders": "never"
 }
