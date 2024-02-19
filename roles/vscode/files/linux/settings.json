@@ -1,4 +1,7 @@
 {
+  "[helm]": {
+    "editor.formatOnSave": false
+  },
   "[markdown]": {
     "editor.formatOnSave": false
   },
@@ -46,6 +49,9 @@
   ],
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
+  "editor.tabCompletion": "on",
+  "editor.wordWrap": "on",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.autoSave": "afterDelay",
@@ -57,8 +63,13 @@
     "**/.settings": true
   },
   "files.trimTrailingWhitespace": true,
+  "files.eol": "\n",
+  "code-eol.newlineCharacter": "¬",
+  "code-eol.returnCharacter": "¤",
+  "code-eol.crlfCharacter": "¤¬",
   "git.autofetch": true,
   "git.suggestSmartCommit": true,
+  "git.openRepositoryInParentFolders": "never",
   "go.formatTool": "goimports",
   "go.toolsManagement.autoUpdate": true,
   "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
@@ -101,12 +112,9 @@
   "workbench.startupEditor": "newUntitledFile",
   "Notes.notesLocation": "/home/p-lubach/.config/vscode-notes",
   "terminal.integrated.enableMultiLinePasteWarning": "auto",
-  "workbench.colorTheme": "Default Dark+",
-  "editor.wordWrap": "on",
   "chat.editor.wordWrap": "on",
   "workbench.editor.empty.hint": "hidden",
-  "editor.renderWhitespace": "all",
-  "editor.tabCompletion": "on",
-  "cloudcode.duetAI.project": "gaie-0008052023",
-  "git.openRepositoryInParentFolders": "never"
+  "workbench.colorTheme": "GitHub Dark",
+  "yaml.format.enable": false,
+  "json.format.enable": true,
 }
