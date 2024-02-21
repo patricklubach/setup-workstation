@@ -73,9 +73,12 @@ alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias myip="curl http://ipecho.net/plain; echo"
 alias pip="pip3"
-alias python="python3.9"
+alias python="python3"
 #alias gactivate="gcloud config configurations activate"
 #alias tflint="docker run --rm -v $(pwd):/data -t ghcr.io/terraform-linters/tflint"
+alias gti="git" 
+alias dokcer="docker"
+alias activate="source .venv/bin/activate" 
 
 eval "$(direnv hook zsh)"
 ### BEGIN terraform_slim_image_wrapper.sh
