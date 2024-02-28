@@ -4,10 +4,3 @@
 
 - include_tasks: debian.yml
   when: ansible_os_family == 'Debian'
-
-- name: Install kubectl
-  become: yes
-  package:
-    state: present
-    name:
-      - kubectl

@@ -22,16 +22,17 @@
       enabled: False
     - role: helm
       enabled: False
+      version: v3.14.2
     - role: kubectl
       enabled: False
     - role: minikube
       enabled: False
     - role: ohmyzsh
-      enabled: False
+      enabled: True
     - role: flameshot
-      enabled: False
+      enabled: True
     - role: helper
-      enabled: False
+      enabled: True
     - role: spotify
       enabled: False
     - role: terraform

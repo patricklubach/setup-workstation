@@ -1,0 +1,6 @@
+---
+- name: Downloads and installs vscode deb package
+  become: True
+  apt:
+    state: present
+    deb: "{{ deb_url }}"

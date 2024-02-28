@@ -1,13 +1,13 @@
 ---
 - name: Install kubectl repository key
-  become: yes
+  become: True
   apt_key:
-    url: "{{ repo_key_url }}"
+    url: "{{ apt_repo_key_url }}"
     state: present
 
 - name: Add kubectl repository to sources list
-  become: yes
+  become: True
   apt_repository:
-    repo: "{{ repo_url }}"
+    repo: "{{ apt_repo_url }}"
     state: present
     filename: kubernetes

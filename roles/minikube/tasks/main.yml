@@ -1,9 +1,2 @@
----
-- name: Download minikube
-  get_url:
-    url: https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-    dest: /tmp/minikube-linux-amd64
-    mode: "0550"
-
-- name: Install minikube
-  command: sudo install /tmp/minikube-linux-amd64 /usr/local/bin/minikube
+- include_tasks: install.yml
+  when: enabled

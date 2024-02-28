@@ -1,0 +1,5 @@
+---
+- name: Remove helm (delete helm binary)
+  ansible.builtin.file:
+    path: ~/.local/bin/helm
+    state: absent

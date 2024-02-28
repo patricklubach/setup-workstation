@@ -1,12 +1,5 @@
----
-- name: Download helm v3 archive
-  ansible.builtin.unarchive:
-    src: https://get.helm.sh/helm-v3.8.0-rc.1-linux-amd64.tar.gz
-    dest: /tmp
-    remote_src: yes
+- include_tasks: install.yml
+  when: enabled
 
-- name: Copy helm to PATH
-  ansible.builtin.copy:
-    src: "/tmp/linux-amd64/helm"
-    dest: ~/.local/bin
-    mode: "0755"
+- include_tasks: uninstall.yml
+  when: not enabled

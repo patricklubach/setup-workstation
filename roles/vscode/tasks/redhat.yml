@@ -1,0 +1,25 @@
+---
+- name: Import vscode gpg key
+  become: True
+  ansible.builtin.rpm_key:
+    state: present
+    key: https://packages.microsoft.com/keys/microsoft.asc
+
+- name: Add vscode repository
+  become: True
+  yum_repository:
+    name: vscode
+    description: RPM repository of vscode
+    baseurl: https://packages.microsoft.com/yumrepos/vscode
+    gpgcheck: yes
+    enabled: yes
+    repo_gpgcheck: yes
+    gpgkey:
+     - https://packages.microsoft.com/keys/microsoft.asc
+
+- name: Installing vscode
+  become: True
+  dnf:
+    name: code
+    state: latest
+    update_cache: yes

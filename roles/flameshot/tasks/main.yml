@@ -4,4 +4,4 @@
   package:
     state: present
     name: flameshot
-  when: "{{ enabled }}"
+  when: enabled

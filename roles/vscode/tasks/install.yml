@@ -1,0 +1,20 @@
+---
+- include_tasks: debian.yml
+  when: ansible_os_family == 'Debian'
+
+- include_tasks: redhat.yml
+  when: ansible_os_family == 'RedHat'
+
+- name: Install vscode extensions
+  ansible.builtin.shell: "code --install-extension {{ item }}"
+  with_items:
+    - "{{ plugins }}"
+
+- name: Link settings.json and keybindings.json
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/linux/{{ item }}"
+    dest: "/home/{{ ansible_user_id }}/.config/Code/User/{{ item }}"
+    state: link
+  with_items:
+    - keybindings.json
+    - settings.json
