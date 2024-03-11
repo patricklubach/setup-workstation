@@ -1,5 +1,0 @@
----
-repo_url: "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian focal contrib"
-repo_keys:
-  - https://www.virtualbox.org/download/oracle_vbox_2016.asc
-  - https://www.virtualbox.org/download/oracle_vbox.asc

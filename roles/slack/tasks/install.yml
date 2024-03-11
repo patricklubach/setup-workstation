@@ -1,0 +1,12 @@
+---
+- name: Import Slack gpg key
+  become: True
+  ansible.builtin.rpm_key:
+    state: present
+    key: https://slack.com/gpg/slack_pubkey_20230710.gpg
+
+- name: Install Slack messenger
+  become: yes
+  dnf:
+    state: present
+    name: "https://downloads.slack-edge.com/releases/linux/4.36.140/prod/x64/slack-4.36.140-0.1.el8.x86_64.rpm"

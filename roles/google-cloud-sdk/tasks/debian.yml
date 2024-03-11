@@ -1,0 +1,28 @@
+---
+- name: Install required packages
+  become: yes
+  apt:
+    state: present
+    update_cache: yes
+    name: "{{ apt_packages }}"
+
+- name: Add the Cloud SDK repository key
+  become: yes
+  apt_key:
+    url: "{{ repo_key_url }}"
+    state: present
+
+- name: Add Google Cloud SDK repository to sources list
+  become: yes
+  apt_repository:
+    repo: "{{ repo_url }}"
+    state: present
+    filename: google-cloud-cli
+
+- name: Install Google Cloud SDK
+  become: yes
+  apt:
+    state: present
+    update_cache: yes
+    name:
+      - google-cloud-cli

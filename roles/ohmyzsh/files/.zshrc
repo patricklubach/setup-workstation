@@ -22,8 +22,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/us
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.terraform/bin
-export PATH=$PATH:$HOME/bin
-export PATH=$PATH:$HOME/.bin
 export PATH=$PATH:$HOME/go/bin
 
 export GOPATH=$HOME/go
@@ -35,38 +33,37 @@ HYPHEN_INSENSITIVE="true"
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="false"
 
-plugins=(
-            asdf
-            command-not-found
-            docker
-            docker-compose
-            gcloud
-            git
-            golang
-            helm
-            kubectl
-            minikube
-            poetry
-            ssh-agent
-            terraform
-            thefuck
-            vscode
-            z
-            # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-            zsh-autosuggestions
-            # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-            zsh-syntax-highlighting
-)
-
 # Sources / Auto-completions
 # AWS CLI auto-completion
-autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
-complete -C '/home/p-lubach/.local/bin/aws_completer' aws
+# autoload bashcompinit && bashcompinit
+# autoload -Uz compinit && compinit
+# complete -C '/home/p-lubach/.local/bin/aws_completer' aws
 source $ZSH/oh-my-zsh.sh
-source <(kubectl completion zsh)
-source <(helm completion zsh)
-source <(gh completion -s zsh)
+
+plugins=(
+    ansible
+    asdf
+    command-not-found
+    docker
+    docker-compose
+    gcloud
+    git
+    gh
+    golang
+    helm
+    kubectl
+    minikube
+    poetry
+    ssh-agent
+    terraform
+    thefuck
+    vscode
+    z
+    # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    zsh-autosuggestions
+    # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    zsh-syntax-highlighting
+)
 
 # Aliases
 alias zshconfig="mate ~/.zshrc"
@@ -76,16 +73,11 @@ alias pip="pip3"
 alias python="python3"
 #alias gactivate="gcloud config configurations activate"
 #alias tflint="docker run --rm -v $(pwd):/data -t ghcr.io/terraform-linters/tflint"
-alias gti="git" 
+alias gti="git"
 alias dokcer="docker"
-alias activate="source .venv/bin/activate" 
+alias activate="source .venv/bin/activate"
 
 eval "$(direnv hook zsh)"
-### BEGIN terraform_slim_image_wrapper.sh
-# alias pre-commit=/usr/local/bin/pre-commit
-# alias sops=/usr/local/bin/sops
-# alias terraform=/usr/local/bin/terraform
-### END terraform_slim_image_wrapper.sh
 
 # HSTR configuration - add this to ~/.zshrc
 alias hh=hstr                    # hh to be alias for hstr
@@ -94,4 +86,3 @@ export HSTR_CONFIG=hicolor       # get more colors
 bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
 
 setopt share_history
-

@@ -1,0 +1,19 @@
+---
+- name: Add Google Cloud SDK repository
+  become: yes
+  yum_repository:
+    name: google-cloud-cli
+    description: RPM repository of Google Cloud SDK
+    baseurl: "{{ yum_repo_url }}"
+    gpgcheck: yes
+    enabled: yes
+    repo_gpgcheck: no
+    gpgkey:
+     - "{{ yum_repo_key }}"
+
+- name: Installing Google Cloud SDK
+  become: yes
+  dnf:
+    name: google-cloud-cli
+    state: latest
+    update_cache: yes

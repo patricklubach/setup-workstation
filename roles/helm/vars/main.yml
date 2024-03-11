@@ -1,4 +1,0 @@
----
-repo_key_url: https://baltocdn.com/helm/signing.asc
-repo_url: "deb https://baltocdn.com/helm/stable/debian/ all main"
-version: v3.14.2

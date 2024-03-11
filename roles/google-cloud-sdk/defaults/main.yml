@@ -1,0 +1,14 @@
+---
+enabled: True
+
+# For Debian based distros like Ubuntu
+apt_packages:
+  - apt-transport-https
+  - ca-certificates
+  - gnupg
+apt_repo_key_url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+apt_repo_url: "deb https://packages.cloud.google.com/apt cloud-sdk main"
+
+# For RedHat based distros like Fedora
+yum_repo_url: https://packages.cloud.google.com/yum/repos/cloud-sdk-el9-x86_64
+yum_repo_key: https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg

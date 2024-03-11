@@ -1,0 +1,7 @@
+---
+enabled: True
+fonts:
+  MesloLGS_NF_Regular: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+  MesloLGS_NF_Regular_Bold: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
+  MesloLGS_NF_Regular_Italic: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+  MesloLGS_NF_Regular_Bold_Italic: https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf

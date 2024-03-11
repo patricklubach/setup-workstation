@@ -1,5 +1,0 @@
----
-- include_tasks: redhat.yml
-  when: ansible_os_family == 'RedHat' and enabled
-- include_tasks: debian.yml
-  when: ansible_os_family == 'Debian' and enabled

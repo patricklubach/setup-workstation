@@ -9,6 +9,10 @@
   ansible.builtin.shell: "code --install-extension {{ item }}"
   with_items:
     - "{{ plugins }}"
+  retries: 3
+  delay: 3
+  register: result
+  until: result.rc == 0
 
 - name: Link settings.json and keybindings.json
   ansible.builtin.file:

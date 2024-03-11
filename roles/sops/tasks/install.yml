@@ -1,0 +1,7 @@
+---
+- name: Install sops in version { version }}
+  get_url:
+    url: https://github.com/getsops/sops/releases/download/{{ version }}/sops-{{ version }}.{{ platform }}.amd64
+    dest: ~/.local/bin/sops
+    mode: "0550"
+    force: True

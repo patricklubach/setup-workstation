@@ -1,5 +1,5 @@
 ---
-- name: Install languages.
+- name: Install languages through 'langpacks-en' package
   become: yes
   package:
     name: langpacks-en

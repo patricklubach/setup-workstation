@@ -1,0 +1,6 @@
+---
+terraform_docs_version: v0.17.0
+tfsec_version: v1.28.5
+tflint_version: v0.50.3
+terraform_switcher_version: 0.13.1308
+terraform_version: 1.7

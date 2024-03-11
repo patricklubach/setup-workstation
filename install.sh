@@ -61,7 +61,7 @@ fi
 cd ${SETUP_DIR}
 
 # Install Ansible roles
-ansible-galaxy install geerlingguy.docker
+ansible-galaxy install geerlingguy.docker,7.1.0
 
 # Provision workstation
 ansible-playbook playbook.yml --ask-become-pass 2>&1 | tee -a provision.log

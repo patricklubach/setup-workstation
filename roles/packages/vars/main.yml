@@ -12,10 +12,13 @@ packages_common:
   - wget
   - xdotool
   - yakuake
+  - direnv
+
 packages_ubuntu:
   - aptitude
   - dbconf-editor
   - gnome-tweak-tool
+
 packages_pip:
   - black
   - flake8

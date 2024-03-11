@@ -1,3 +1,0 @@
----
-repo_signing_key: https://dl.google.com/linux/linux_signing_key.pub
-repo_url: "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main"

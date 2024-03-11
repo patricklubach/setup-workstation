@@ -1,14 +1,8 @@
 ---
-- name: Create a directory ({{ role_path }}/files/osupdate) if it does not exist
-  ansible.builtin.file:
-    path: "{{ role_path }}/files/osupdate"
-    state: directory
-    mode: '0755'
-  when: enabled
-
 - name: Link osupdate helper script
   ansible.builtin.file:
     src: "{{ role_path }}/files/osupdate"
     dest: "/home/{{ ansible_user_id }}/.local/bin/osupdate"
     state: link
+    force: True
   when: enabled

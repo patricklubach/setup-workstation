@@ -1,0 +1,5 @@
+---
+# defaults file for sops
+enabled: True
+version: "v3.8.1"
+platform: "linux"

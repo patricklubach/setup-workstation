@@ -3,4 +3,4 @@
   become: True
   apt:
     state: present
-    deb: "{{ deb_url }}"
+    deb: "{{ apt_url }}"

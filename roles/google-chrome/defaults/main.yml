@@ -1,0 +1,4 @@
+---
+enabled: True
+repo_signing_key: https://dl.google.com/linux/linux_signing_key.pub
+debian_repo_url: "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main"

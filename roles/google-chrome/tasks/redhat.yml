@@ -1,0 +1,17 @@
+---
+- name: Install fedora-workstation-repositories
+  become: yes
+  dnf:
+    state: present
+    update_cache: yes
+    name: fedora-workstation-repositories
+
+- name: Enable the Google Chrome repo
+  ansible.builtin.shell: sudo dnf config-manager --set-enabled google-chrome
+
+- name: Install Google Chrome (stable)
+  become: yes
+  dnf:
+    state: present
+    update_cache: yes
+    name: google-chrome-stable

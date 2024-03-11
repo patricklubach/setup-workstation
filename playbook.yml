@@ -5,37 +5,22 @@
   hosts: localhost
   roles:
     - role: packages
-      enabled: True
-    - role: distrobox
-      enabled: False
-    - role: fonts
-      enabled: False
-    - role: language
-      enabled: False
-    - role: chrome
-      enabled: True
+    - role: helper
     - role: vscode
-      enabled: True
-    # - virtualbox
-    # - golang
-    - role: google_cloud_sdk
-      enabled: False
+    - role: google-chrome
+    - role: google-cloud-cli
     - role: helm
-      enabled: False
-      version: v3.14.2
     - role: kubectl
-      enabled: False
     - role: minikube
       enabled: False
     - role: ohmyzsh
-      enabled: True
+    - role: fonts
+    - role: language
     - role: flameshot
-      enabled: True
-    - role: helper
-      enabled: True
     - role: spotify
       enabled: False
     - role: terraform
-      enabled: False
+    - role: slack
+    - role: sops
     - role: geerlingguy.docker
       become: yes

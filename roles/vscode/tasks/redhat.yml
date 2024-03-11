@@ -3,19 +3,19 @@
   become: True
   ansible.builtin.rpm_key:
     state: present
-    key: https://packages.microsoft.com/keys/microsoft.asc
+    key: "{{ rpm_key_url }}"
 
 - name: Add vscode repository
   become: True
   yum_repository:
     name: vscode
     description: RPM repository of vscode
-    baseurl: https://packages.microsoft.com/yumrepos/vscode
+    baseurl: "{{ yum_repo_url }}"
     gpgcheck: yes
     enabled: yes
     repo_gpgcheck: yes
     gpgkey:
-     - https://packages.microsoft.com/keys/microsoft.asc
+     - "{{ yum_gpg_key_url }}"
 
 - name: Installing vscode
   become: True
