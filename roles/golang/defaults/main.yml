@@ -1,2 +1,4 @@
 ---
 enabled: True
+
+go_version: 1.22.1
