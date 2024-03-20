@@ -33,13 +33,6 @@ HYPHEN_INSENSITIVE="true"
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="false"
 
-# Sources / Auto-completions
-# AWS CLI auto-completion
-# autoload bashcompinit && bashcompinit
-# autoload -Uz compinit && compinit
-# complete -C '/home/p-lubach/.local/bin/aws_completer' aws
-source $ZSH/oh-my-zsh.sh
-
 plugins=(
     ansible
     asdf
@@ -65,6 +58,15 @@ plugins=(
     zsh-syntax-highlighting
 )
 
+zstyle :omz:plugins:ssh-agent quiet yes
+
+# Sources / Auto-completions
+# AWS CLI auto-completion
+# autoload bashcompinit && bashcompinit
+# autoload -Uz compinit && compinit
+# complete -C '/home/p-lubach/.local/bin/aws_completer' aws
+source $ZSH/oh-my-zsh.sh
+
 # Aliases
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -76,6 +78,8 @@ alias python="python3"
 alias gti="git"
 alias dokcer="docker"
 alias activate="source .venv/bin/activate"
+alias tf="terraform"
+alias terrafrom="terraform"
 
 eval "$(direnv hook zsh)"
 
