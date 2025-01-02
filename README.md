@@ -19,6 +19,12 @@ Install the following packages and tools:
 - `fonts-powerline` (Powerline Fonts)
 - `terraform`
 - `neovim`
+  - [lazy.vim](https://github.com/folke/lazy.nvim)
+  - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
+  - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+    - [lua-language-server](https://luals.github.io/#neovim-install)
+  - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+  - [lazydev.nvim](https://github.com/folke/lazydev.nvim)
 - `zsh`
 - `ohmyzsh`
   - thefuck
@@ -26,9 +32,6 @@ Install the following packages and tools:
   - zsh-syntax-highlighting
 - MesloLGS NF fonts
 - [`wezterm`](https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/)
-  - lazy.vim
-  - treesitter
-  - lsp (language server)
 
 ## Quick installation
 
