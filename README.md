@@ -2,54 +2,33 @@
 
 ## Overview
 
-The following steps will be performed while provisioning your workstation:
+A repository that includes all my tools which I usually use for daily work.
 
-Installs the following packages and tools:
+Install the following packages and tools:
 
-- `ansible`
-- `apt-transport-https` (on ubuntu)
-- `aptitude`
-- `code` (Visual Studio Code)
 - `curl`
-- `deja-dup`
 - `docker`
 - `git`
-- `go` (Version: 1.16.6)
 - `chrome` (Google Chrome)
 - `gcloud` (Google Cloud SDK)
-- `golang`
 - `helm` (Version 3)
-- `htop`
 - `jq`
-- `keepassxc`
 - `kubectl`
-- `minikube`
-- `mlocate`
+- `python`
 - `pip3`
 - `fonts-powerline` (Powerline Fonts)
-- `python3`
 - `terraform`
-- `vim`
-- `virtualbox`
-- `wget`
+- `neovim`
 - `zsh`
-
-Others:
-
-- oh-my-zsh plugins
+- `ohmyzsh`
   - thefuck
   - zsh-autosuggestions
   - zsh-syntax-highlighting
 - MesloLGS NF fonts
-
-## OS support
-
-The ansible playbook is tested and support on the following OS:
-
-- Ubuntu 16.04 / 18.04 / 20.04.3
-- Fedora 35
-
-If an error occurs, please create an issue.
+- [`wezterm`](https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/)
+  - lazy.vim
+  - treesitter
+  - lsp (language server)
 
 ## Quick installation
 
