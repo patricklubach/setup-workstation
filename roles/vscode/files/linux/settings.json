@@ -117,4 +117,7 @@
   "workbench.colorTheme": "GitHub Dark",
   "yaml.format.enable": false,
   "json.format.enable": true,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
 }

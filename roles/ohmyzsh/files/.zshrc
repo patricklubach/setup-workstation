@@ -23,7 +23,7 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.terraform/bin
 export PATH=$PATH:$HOME/go/bin
-
+export PATH=$PATH:$HOME/.local/bin/lua-language-server/bin
 export GOPATH=$HOME/go
 
 # Uncomment the following line to use hyphen-insensitive completion.
@@ -33,13 +33,15 @@ HYPHEN_INSENSITIVE="true"
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="false"
 
+zstyle :omz:plugins:ssh-agent quiet yes
+
 plugins=(
     ansible
     asdf
     command-not-found
     docker
     docker-compose
-    gcloud
+    # gcloud
     git
     gh
     golang
@@ -57,8 +59,6 @@ plugins=(
     # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
     zsh-syntax-highlighting
 )
-
-zstyle :omz:plugins:ssh-agent quiet yes
 
 # Sources / Auto-completions
 # AWS CLI auto-completion
@@ -80,7 +80,7 @@ alias dokcer="docker"
 alias activate="source .venv/bin/activate"
 alias tf="terraform"
 alias terrafrom="terraform"
-
+alias grep="rg"
 eval "$(direnv hook zsh)"
 
 # HSTR configuration - add this to ~/.zshrc
